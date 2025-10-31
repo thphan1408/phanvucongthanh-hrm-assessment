@@ -103,7 +103,6 @@ GET /api/employees
       "name": "Jane Smith",
       "department": "Marketing",
       "leaveBalance": 10
-}
     }
   ]
 }
