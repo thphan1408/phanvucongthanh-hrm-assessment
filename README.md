@@ -100,11 +100,10 @@ GET /api/employees
   "data": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "department": "Engineering",
-      "position": "Software Developer",
-      "hireDate": "2023-01-15"
+      "name": "Jane Smith",
+      "department": "Marketing",
+      "leaveBalance":10
+}
     }
   ]
 }
@@ -118,10 +117,8 @@ Content-Type: application/json
 
 {
   "name": "Jane Smith",
-  "email": "jane.smith@example.com",
   "department": "Marketing",
-  "position": "Marketing Manager",
-  "hireDate": "2023-03-01"
+  "leaveBalance": "10"
 }
 ```
 
@@ -152,13 +149,10 @@ GET /api/leave
   "success": true,
   "data": [
     {
-      "id": 1,
       "employeeId": 1,
-      "employeeName": "John Doe",
       "startDate": "2023-12-01",
       "endDate": "2023-12-05",
       "reason": "Vacation",
-      "status": "pending"
     }
   ]
 }
@@ -200,12 +194,10 @@ PATCH /api/leave/:id/approve
    curl -X POST http://localhost:8080/api/employees \
      -H "Content-Type: application/json" \
      -d '{
-       "name": "Alice Johnson",
-       "email": "alice.johnson@example.com",
-       "department": "HR",
-       "position": "HR Manager",
-       "hireDate": "2023-02-01"
-     }'
+          "name": "Jane Smith",
+          "department": "Marketing",
+          "leaveBalance": 10
+       }'
    ```
 
 3. **Create a leave request:**
@@ -241,12 +233,10 @@ const newEmployee = await fetch("http://localhost:8080/api/employees", {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    name: "Bob Wilson",
-    email: "bob.wilson@example.com",
-    department: "Finance",
-    position: "Accountant",
-    hireDate: "2023-04-01",
-  }),
+  "name": "Jane Smith",
+  "department": "Marketing",
+  "leaveBalance": 10
+}),
 }).then((response) => response.json())
 
 // Create leave request
