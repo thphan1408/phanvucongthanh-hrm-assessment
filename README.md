@@ -102,7 +102,7 @@ GET /api/employees
       "id": 1,
       "name": "Jane Smith",
       "department": "Marketing",
-      "leaveBalance":10
+      "leaveBalance": 10
 }
     }
   ]
@@ -118,7 +118,7 @@ Content-Type: application/json
 {
   "name": "Jane Smith",
   "department": "Marketing",
-  "leaveBalance": "10"
+  "leaveBalance": 10
 }
 ```
 
