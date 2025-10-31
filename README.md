@@ -258,7 +258,6 @@ const leaveRequest = await fetch("http://localhost:8080/api/leave", {
 - **Employee Management:** Create, view, and delete employees
 - **Leave Request System:** Submit and approve leave requests
 - **RESTful API:** Clean and documented API endpoints
-- **Responsive Frontend:** Simple web interface for managing HRM tasks
 - **CORS Enabled:** Frontend can communicate with backend from different origins
 
 ## Technologies Used
@@ -289,13 +288,6 @@ npm run dev
 ```
 
 This uses nodemon for automatic server restart on file changes.
-
-### Testing
-
-```bash
-cd backend
-npm test
-```
 
 ## Notes
 
